@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to-do-app</title>
+    <script type="module" src="js.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <label for="input">Add task here:</label>
+    <input type="addTask" id="userInput" />
+    <button id="add">Add to ToDo List +</button>
+
+    <template>
+      <div>
+      <input type="checkbox" id="checkList">
+    </input>
+    <label for="checkList" id="labelInput"></label>
+  </div>
+    </template>
+    <h1 id="toDo">ToDo</h1>
+    <ul id="toDoList"></ul>
+
+    <h1>Done</h1>
+    <ul id="doneList"></ul>
+  </body>
+</html>
