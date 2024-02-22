@@ -8,21 +8,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <label for="input">Add task here:</label>
-    <input type="addTask" id="userInput" />
-    <button id="add">Add to ToDo List +</button>
-
-    <template>
-      <div>
-      <input type="checkbox" id="checkList">
-    </input>
-    <label for="checkList" id="labelInput"></label>
-  </div>
+    <div id="toolButtons">
+      <label for="input">Add task here:</label>
+      <input type="addTask" id="userInput" />
+      <label for="amountInput">#:</label>
+      <input type="number" id="amountInput" />
+      <button id="add">Add to ToDo List +</button>
+    </div>
+    <div id="displayBox">
+      <div id="toDoDiv">
+        <h1 id="toDoHeader">ToDo</h1>
+        <ul id="toDoList"></ul>
+      </div>
+      <div id="doneDiv">
+        <h1 id="doneHeader">Done</h1>
+        <ul id="doneList"></ul>
+      </div>
+    </div>
+    <button id="clear">Clear ToDo List</button>
+    <!-- ---------------------------------------- Template -->
+    <template id="templateToDo">
+      <div id="taskButtons">
+        <div id="toDoTask">
+          <input type="checkbox" class="checkList" />
+          <label for="checkList" class="labelInput"></label>
+        </div>
+        <span class="amount"></span>
+        <div id="toDoButtons">
+          <button class="editBtn">Edit</button>
+          <button class="removeBtn">Remove</button>
+        </div>
+      </div>
     </template>
-    <h1 id="toDo">ToDo</h1>
-    <ul id="toDoList"></ul>
-
-    <h1>Done</h1>
-    <ul id="doneList"></ul>
+    <template id="doneTemplate">
+      <div>
+        <input type="checkbox" class="checkList" checked />
+        <label for="checkList" class="labelInput"></label>
+      </div>
+    </template>
+    <!-- ---------------------------------------- Template -->
   </body>
 </html>
