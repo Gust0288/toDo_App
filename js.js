@@ -1,5 +1,3 @@
-import { $, $$ } from "../utils/dom.js";
-
 const input = document.querySelector("#userInput");
 const addButton = document.querySelector("#add");
 const clearButton = document.querySelector("#clear");
