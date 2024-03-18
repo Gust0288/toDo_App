@@ -1,9 +1,9 @@
 import { $, $$ } from "../utils/dom.js";
 
-const input = $("#userInput");
-const addButton = $("#add");
-const clearButton = $("#clear");
-const amountInput = $("#amountInput");
+const input = document.querySelector("#userInput");
+const addButton = document.querySelector("#add");
+const clearButton = document.querySelector("#clear");
+const amountInput = document.querySelector("#amountInput");
 
 addButton.addEventListener("click", () => {
   let inputValue = input.value;
@@ -47,14 +47,14 @@ function filterAndSortArray() {
 
 //Bygger det ud i dommen
 function showList() {
-  const toDoTbody = $("#toDoList");
-  const doneTbody = $("#doneList");
+  const toDoTbody = document.querySelector("#toDoList");
+  const doneTbody = document.querySelector("#doneList");
 
   toDoTbody.innerHTML = "";
   doneTbody.innerHTML = "";
   // for hvert element i arrayet laver funktionen en ny template den kopiere til ul - DOM
   taskArray.forEach((task) => {
-    const template = $("template");
+    const template = document.querySelector("template");
     const clone = template.content.cloneNode(true);
 
     clone.querySelector(".labelInput").textContent = task.name;
